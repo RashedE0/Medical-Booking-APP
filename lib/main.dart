@@ -10,47 +10,24 @@ import 'screens/admin_screen.dart';
 import 'screens/payment_screen.dart';
 
 void main() {
-  runApp(const HealthCareApp());
+  runApp(const MedicalBookingApp());
 }
 
-class HealthCareApp extends StatelessWidget {
-  const HealthCareApp({super.key});
+class MedicalBookingApp extends StatelessWidget {
+  const MedicalBookingApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HealthCare App',
+      title: 'Medical Booking',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor: const Color(0xFF1E88E5),
-        scaffoldBackgroundColor: const Color(0xFFF5F7FA),
         textTheme: GoogleFonts.poppinsTextTheme(),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1E88E5),
-          primary: const Color(0xFF1E88E5),
-          secondary: const Color(0xFF42A5F5),
-        ),
         appBarTheme: const AppBarTheme(
-          elevation: 0,
+          color: Color(0xFF1E88E5),
           centerTitle: true,
-          backgroundColor: Color(0xFF1E88E5),
           foregroundColor: Colors.white,
-        ),
-        cardTheme: CardTheme(
-          elevation: 2,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            elevation: 2,
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
         ),
       ),
       initialRoute: '/',
