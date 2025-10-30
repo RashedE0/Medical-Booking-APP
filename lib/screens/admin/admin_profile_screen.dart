@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../services/api_service.dart';
 
-class PatientProfileScreen extends StatefulWidget {
-  const PatientProfileScreen({super.key});
+class AdminProfileScreen extends StatefulWidget {
+  const AdminProfileScreen({super.key});
 
   @override
-  State<PatientProfileScreen> createState() => _PatientProfileScreenState();
+  State<AdminProfileScreen> createState() => _AdminProfileScreenState();
 }
 
-class _PatientProfileScreenState extends State<PatientProfileScreen> {
+class _AdminProfileScreenState extends State<AdminProfileScreen> {
   String name = '';
   String email = '';
 

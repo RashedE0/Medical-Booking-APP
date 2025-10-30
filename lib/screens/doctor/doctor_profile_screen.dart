@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../../services/api_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class PatientProfileScreen extends StatefulWidget {
-  const PatientProfileScreen({super.key});
+class DoctorProfileScreen extends StatefulWidget {
+  const DoctorProfileScreen({super.key});
 
   @override
-  State<PatientProfileScreen> createState() => _PatientProfileScreenState();
+  State<DoctorProfileScreen> createState() => _DoctorProfileScreenState();
 }
 
-class _PatientProfileScreenState extends State<PatientProfileScreen> {
+class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
   String name = '';
   String email = '';
 
@@ -33,10 +33,14 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
       appBar: AppBar(title: const Text('Profile')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ListTile(
-          leading: const Icon(Icons.person),
-          title: Text(name),
-          subtitle: Text(email),
+        child: Column(
+          children: [
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: Text(name),
+              subtitle: Text(email),
+            ),
+          ],
         ),
       ),
     );
